@@ -88,7 +88,7 @@
             watch : {
                 $route () {
                     this.form_data.first_name = this.$route.query.name;
-                    $("#fieldfihudt").val(this.form_data.first_name);
+                    $("#fieldgqdtr").val(this.form_data.first_name);
                     this.form_data.email = this.$route.query.email;
                     $("#newsletter_email").val(this.form_data.email);
                 }
