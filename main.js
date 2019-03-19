@@ -145,24 +145,24 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                 social_media: [
                     {
                         name: "Facebook",
-                        url: "https://www.facebook.com",
+                        url: "https://www.facebook.com/anaheimhillsfestival",
                         iconClass: "fab fa-facebook"
                     },
-                    {
-                        name: "Twitter",
-                        url: "https://twitter.com",
-                        iconClass: "fab fa-twitter"
-                    },
+                    // {
+                    //     name: "Twitter",
+                    //     url: "https://twitter.com",
+                    //     iconClass: "fab fa-twitter"
+                    // },
                     {
                         name: "Instagram",
-                        url: "https://www.instagram.com",
+                        url: "https://www.instagram.com/anaheimhillsfestival",
                         iconClass: "fab fa-instagram"
                     },
-                    {
-                        name: "SnapChat",
-                        url: "https://www.snapchat.com",
-                        iconClass: "fab fa-snapchat-ghost"
-                    },
+                    // {
+                    //     name: "SnapChat",
+                    //     url: "https://www.snapchat.com",
+                    //     iconClass: "fab fa-snapchat-ghost"
+                    // },
                     // {
                     //     name: "YouTube",
                     //     url: "https://www.youtube.com/",
