@@ -35,6 +35,7 @@
                                     :suggestion-attribute="suggestionAttribute" 
                                     @select="onOptionSelect" 
                                     :threshold="1"
+                                    class="mapSearch"
                                 >
                                     <template slot="item" scope="option">
                                         <article class="media">
