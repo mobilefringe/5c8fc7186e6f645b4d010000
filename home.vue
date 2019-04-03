@@ -215,7 +215,7 @@
                         var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format();
                         if (today >= showOnWebDate) {
                             if (_.includes(value.image_url, 'missing')) {
-                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5b1550796e6f641cab010000/image/png/1529532181000/promoplaceholder2@2x.png";
+                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5c8fc7186e6f645b4d010000/image/png/1553541541030/anaheim_hills_placeholder.png";
                             }
                             // Sort Featured Promotions
                             if (value.is_featured) {
@@ -241,7 +241,7 @@
                         var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format();
                         if (today >= showOnWebDate) {
                             if (_.includes(value.image_url, 'missing')) {
-                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5b1550796e6f641cab010000/image/png/1529532187000/eventsplaceholder2@2x.png";
+                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5c8fc7186e6f645b4d010000/image/png/1553541541030/anaheim_hills_placeholder.png";
                             }
                             // Sort Featured Events
                             if (value.is_featured) {
