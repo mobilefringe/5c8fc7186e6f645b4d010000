@@ -49,7 +49,7 @@
                         this.pageBanner = temp_repo.images[0];
                     } else {
                         this.pageBanner = {
-                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5c93d5496e6f642f32010000/image/png/1553624485505/creekside_banner.png"
+                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5c8fc7186e6f645b4d010000/image/png/1553541537390/anaheim_hills_banner.png"
                         }
                     }
                     if(response && response[1]){
