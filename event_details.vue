@@ -86,7 +86,7 @@
                         this.pageBanner = temp_repo[0];
                     } else {
                         this.pageBanner = {
-                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5b5f2c136e6f644fcb5b0100/image/jpeg/1529532304000/insidebanner2.jpg"
+                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5c8fc7186e6f645b4d010000/image/png/1553541537390/anaheim_hills_banner.png"
                         }
                     }
                     
@@ -101,7 +101,7 @@
                             }
                         } else {
                             if (_.includes(this.currentEvent.event_image_url_abs, 'missing')) {
-                                this.currentEvent.image_url = "//codecloud.cdn.speedyrails.net/sites/5b8712636e6f641ebd220000/image/png/1529532187000/eventsplaceholder2@2x.png";    
+                                this.currentEvent.image_url = "//codecloud.cdn.speedyrails.net/sites/5c8fc7186e6f645b4d010000/image/png/1553541541030/anaheim_hills_placeholder.png";    
                             }
                         }
 					}
