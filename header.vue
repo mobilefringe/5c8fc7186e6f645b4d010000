@@ -21,7 +21,7 @@
                     <div class="col-md-12">
                         <nav id="primary_nav">
     						<ul>
-    						    <li class="menu_item" @mouseover="showDropDown = !showDropDown" v-for="item in menu_items" :id="item.id">
+    						    <li class="menu_item" v-for="item in menu_items" :id="item.id">
     						        <router-link v-if="item.sub_menu == undefined" :to="item.href">{{ item.name }}</router-link>
     						        <span @click="showDropDown = !showDropDown" v-if="item.sub_menu != undefined">{{ item.name }}</span>
     						        <ul v-show="showDropDown" v-if="item.sub_menu">
