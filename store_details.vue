@@ -163,7 +163,7 @@
                     }
                     else {
                         this.pageBanner = {
-                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5b71eb886e6f6450013c0000/image/jpeg/1529532304000/insidebanner2.jpg"
+                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5c8fc7186e6f645b4d010000/image/png/1553541537390/anaheim_hills_banner.png"
                         }
                     }
                     
@@ -255,7 +255,7 @@
                             var current_promo = vm.findPromoById(value);
                             
                             if (_.includes(current_promo.image_url, 'missing')) {
-                                current_promo.image_url = "//codecloud.cdn.speedyrails.net/sites/5b8712636e6f641ebd220000/image/png/1529532181000/promoplaceholder2@2x.png";
+                                current_promo.image_url = "//codecloud.cdn.speedyrails.net/sites/5c8fc7186e6f645b4d010000/image/png/1553541541030/anaheim_hills_placeholder.png";
                             }
     
                             temp_promo.push(current_promo);
@@ -268,7 +268,7 @@
                             var current_event = vm.findEventById(value);
                             
                             if (_.includes(current_event.image_url, 'missing')) {
-                                current_event.image_url = "//codecloud.cdn.speedyrails.net/sites/5b8712636e6f641ebd220000/image/png/1529532187000/eventsplaceholder2@2x.png";
+                                current_event.image_url = "//codecloud.cdn.speedyrails.net/sites/5c8fc7186e6f645b4d010000/image/png/1553541541030/anaheim_hills_placeholder.png";
                             }
     
                             temp_event.push(current_event);
