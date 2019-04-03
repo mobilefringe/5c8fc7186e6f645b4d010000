@@ -100,7 +100,7 @@
                         this.pageBanner = temp_repo.images[0];
                     } else {
                         this.pageBanner = {
-                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5b71eb886e6f6450013c0000/image/jpeg/1529532304000/insidebanner2.jpg"
+                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5c8fc7186e6f645b4d010000/image/png/1553541537390/anaheim_hills_banner.png"
                         }
                     }
                     
