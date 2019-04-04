@@ -8,7 +8,7 @@
                     <slick ref="slick" :options="slickOptions">
                         <div v-if="homeBanners" v-for="banner in homeBanners">
                             <div v-if="banner.name && banner.description" class="banner_height">
-                                <div class="banner_image" style="background-image: url(//codecloud.cdn.speedyrails.net/sites/5c8fc7186e6f645b4d010000/image/jpeg/1554401780323/ahf_home_1925x470.jpg></div>
+                                <div class="banner_image" style="background-image: url(//codecloud.cdn.speedyrails.net/sites/5c8fc7186e6f645b4d010000/image/jpeg/1554401780323/ahf_home_1925x470.jpg"></div>
                                 <div class="banner_content_container">
                                     <div class="banner_content">
                                         <span v-if="banner.heading" class="banner_heading">{{ banner.heading }}</span>
