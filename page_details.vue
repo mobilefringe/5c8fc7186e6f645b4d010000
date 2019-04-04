@@ -59,7 +59,7 @@
                         _this.dataLoaded = true;
                         console.log(_this.currentPage)
                         if (_this.currentPage.title = "Thank You") {
-                            _this.currentPage.title = Newsletter
+                            _this.currentPage.title = "Newsletter"
                         }
                     }, function (error) {
                         console.error( "Could not retrieve data from server. Please check internet connection and try again.");
