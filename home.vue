@@ -6,29 +6,30 @@
                 <div class="home_banner_container">
                     <div class="prev"></div>
                     <slick ref="slick" :options="slickOptions">
-                        <div v-if="homeBanners" v-for="banner in homeBanners">
-                            <div v-if="banner.name && banner.description" class="banner_height">
-                                <!--<div class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>-->
-                                <!--<div class="banner_content_container">-->
-                                <!--    <div class="banner_content">-->
-                                <!--        <span v-if="banner.heading" class="banner_heading">{{ banner.heading }}</span>-->
-                                <!--        <h1 class="banner_title">{{ banner.name }}</h1>-->
-                                <!--        <p class="banner_text">{{ banner.description }}</p>-->
-                                <!--        <a :href="banner.url">-->
-                                <!--            <span class="banner_btn animated_btn">Find Out More</span>-->
-                                <!--        </a>-->
-                                <!--    </div>-->
-                                <!--</div>-->
-                            </div>
-                            <div v-else-if="!banner.url">
-                                <div class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
-                            </div>
-                            <div v-else>
-                                <!--<a :href="banner.url" aria-label="banner.name">-->
-                                    <div class="banner_image" style="background-image: url(//codecloud.cdn.speedyrails.net/sites/5c8fc7186e6f645b4d010000/image/jpeg/1554401780323/ahf_home_1925x470.jpg"></div>
-                                <!--</a>-->
-                            </div>
-                        </div>
+                        <div class="banner_image" style="background-image: url(//codecloud.cdn.speedyrails.net/sites/5c8fc7186e6f645b4d010000/image/jpeg/1554401780323/ahf_home_1925x470.jpg"></div>
+                        <!--<div v-if="homeBanners" v-for="banner in homeBanners">-->
+                        <!--    <div v-if="banner.name && banner.description" class="banner_height">-->
+                        <!--        <div class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>-->
+                        <!--        <div class="banner_content_container">-->
+                        <!--            <div class="banner_content">-->
+                        <!--                <span v-if="banner.heading" class="banner_heading">{{ banner.heading }}</span>-->
+                        <!--                <h1 class="banner_title">{{ banner.name }}</h1>-->
+                        <!--                <p class="banner_text">{{ banner.description }}</p>-->
+                        <!--                <a :href="banner.url">-->
+                        <!--                    <span class="banner_btn animated_btn">Find Out More</span>-->
+                        <!--                </a>-->
+                        <!--            </div>-->
+                        <!--        </div>-->
+                        <!--    </div>-->
+                        <!--    <div v-else-if="!banner.url">-->
+                        <!--        <div class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>-->
+                        <!--    </div>-->
+                        <!--    <div v-else>-->
+                        <!--        <a :href="banner.url" aria-label="banner.name">-->
+                        <!--            <div class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>-->
+                        <!--        </a>-->
+                        <!--    </div>-->
+                        <!--</div>-->
                     </slick>
                     <div class="next"></div>
                 </div>
