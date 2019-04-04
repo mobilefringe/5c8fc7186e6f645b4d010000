@@ -58,6 +58,9 @@
                         _this.$breadcrumbs[0].meta.breadcrumb = _this.currentPage.title
                         _this.dataLoaded = true;
                         console.log(_this.currentPage)
+                        if (_this.currentPage.title = "Thank You") {
+                            _this.currentPage.title = Newsletter
+                        }
                     }, function (error) {
                         console.error( "Could not retrieve data from server. Please check internet connection and try again.");
                         _this.$router.replace({ name: '404' });
