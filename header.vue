@@ -21,10 +21,10 @@
                     <div class="col-md-12">
                         <nav id="primary_nav">
     						<ul>
-    						    <li class="menu_item" v-for="item in menu_items" :id="item.id">
+    						    <li class="menu_item" v-for="item in menu_items" :id="item.id" @mouseleave="showDropDown = false" @mouseover="showDropDown = true">
     						        <router-link v-if="item.sub_menu == undefined" :to="item.href">{{ item.name }}</router-link>
-    						        <span v-if="item.sub_menu != undefined">{{ item.name }}</span>
-    						        <ul v-if="item.sub_menu">
+    						        <span @click="showDropDown = !showDropDown" v-if="item.sub_menu != undefined">{{ item.name }}</span>
+    						        <ul v-show="showDropDown" v-if="item.sub_menu">
     						            <li @click="showDropDown = !showDropDown" v-for="sub_menu in item.sub_menu" class="dropdown_item">
     						                <router-link :to="sub_menu.href">{{ sub_menu.name }}</router-link>
     						            </li>
@@ -83,7 +83,7 @@
                     windowWidth: 0,
                     scrollY: false,
                     siteInfo: site,
-                    showDropDown: true
+                    showDropDown: false
                 }
             },
             props:['menu_items', 'social_media'],
