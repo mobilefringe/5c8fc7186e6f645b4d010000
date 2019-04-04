@@ -16,7 +16,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <!--<div v-if="main" class="margin_60" v-html="main.body"></div>-->
+                            <div v-if="main" class="margin_60" v-html="main.body"></div>
                             <!--<p class="margin_60">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac egestas nisl. Cras odio massa, tincidunt ut faucibus in, egestas non nisl. Morbi vel nibh metus. In quis est eget risus semper facilisis. Sed in felis vel lorem consectetur convallis. Aliquam fringilla facilisis ipsum et sagittis. Maecenas rutrum urna id efficitur ultrices. Duis porttitor, ante quis consectetur aliquet, elit massa dignissim ex, non luctus lacus dolor quis ipsum.</p>-->
                         </div>
                     </div>
@@ -129,6 +129,7 @@
                         if(response[0].data && response[0].data.subpages){
                            this.contactInfo = response[0].data.subpages[0];
                         }
+                        console.log(this.main)
                     }
                     this.dataLoaded = true;
                 });
