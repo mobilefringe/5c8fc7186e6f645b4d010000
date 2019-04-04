@@ -91,7 +91,6 @@
 						this.$router.replace({ path: '/posts' });
 					}
 			    	this.$breadcrumbs[1].meta.breadcrumb = this.currentPromo.title
-			    	console.log(this.currentPromo)
 					this.dataLoaded = true;
 				}, error => {
 					console.error("Could not retrieve data from server. Please check internet connection and try again.");
