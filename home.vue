@@ -6,30 +6,29 @@
                 <div class="home_banner_container">
                     <div class="prev"></div>
                     <slick ref="slick" :options="slickOptions">
-                        <div class="banner_image" style="background-image: url(//codecloud.cdn.speedyrails.net/sites/5c8fc7186e6f645b4d010000/image/jpeg/1554401780323/ahf_home_1925x470.jpg"></div>
-                        <!--<div v-if="homeBanners" v-for="banner in homeBanners">-->
-                        <!--    <div v-if="banner.name && banner.description" class="banner_height">-->
-                        <!--        <div class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>-->
-                        <!--        <div class="banner_content_container">-->
-                        <!--            <div class="banner_content">-->
-                        <!--                <span v-if="banner.heading" class="banner_heading">{{ banner.heading }}</span>-->
-                        <!--                <h1 class="banner_title">{{ banner.name }}</h1>-->
-                        <!--                <p class="banner_text">{{ banner.description }}</p>-->
-                        <!--                <a :href="banner.url">-->
-                        <!--                    <span class="banner_btn animated_btn">Find Out More</span>-->
-                        <!--                </a>-->
-                        <!--            </div>-->
-                        <!--        </div>-->
-                        <!--    </div>-->
-                        <!--    <div v-else-if="!banner.url">-->
-                        <!--        <div class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>-->
-                        <!--    </div>-->
-                        <!--    <div v-else>-->
-                        <!--        <a :href="banner.url" aria-label="banner.name">-->
-                        <!--            <div class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>-->
-                        <!--        </a>-->
-                        <!--    </div>-->
-                        <!--</div>-->
+                        <div v-if="homeBanners" v-for="banner in homeBanners">
+                            <div v-if="banner.name && banner.description" class="banner_height">
+                                <div class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
+                                <div class="banner_content_container">
+                                    <div class="banner_content">
+                                        <span v-if="banner.heading" class="banner_heading">{{ banner.heading }}</span>
+                                        <h1 class="banner_title">{{ banner.name }}</h1>
+                                        <p class="banner_text">{{ banner.description }}</p>
+                                        <a :href="banner.url">
+                                            <span class="banner_btn animated_btn">Find Out More</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div v-else-if="!banner.url">
+                                <div class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
+                            </div>
+                            <div v-else>
+                                <a :href="banner.url" aria-label="banner.name">
+                                    <div class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
+                                </a>
+                            </div>
+                        </div>
                     </slick>
                     <div class="next"></div>
                 </div>
@@ -186,24 +185,38 @@
                 ]),
                 homeBanners() {
                     var banners = [];
-                    _.forEach(this.$store.state.banners, function (value, key) {
-                        var today = new Date();
-                        var start = new Date (value.start_date);
-                        if (start <= today){
-                            if (value.end_date){
-                                var end = new Date (value.end_date);
-                                if (end >= today){
-                                    banners.push(value);  
-                                }
-                            } else {
-                                banners.push(value);
-                            }
+                    // _.forEach(this.$store.state.banners, function (value, key) {
+                    //     var today = new Date();
+                    //     var start = new Date (value.start_date);
+                    //     if (start <= today){
+                    //         if (value.end_date){
+                    //             var end = new Date (value.end_date);
+                    //             if (end >= today){
+                    //                 banners.push(value);  
+                    //             }
+                    //         } else {
+                    //             banners.push(value);
+                    //         }
                             
-                            if (value.cms_fields.subheader) {
-                                value.heading = value.cms_fields.subheader;
-                            }
-                        }
+                    //         if (value.cms_fields.subheader) {
+                    //             value.heading = value.cms_fields.subheader;
+                    //         }
+                    //     }
+                    // });
+                    var temp_image_url = ["//codecloud.cdn.speedyrails.net/sites/5c8fc7186e6f645b4d010000/image/jpeg/1554401780323/ahf_home_1925x470.jpg" ]
+                    var temp_name = ["Lorem Ipsum"]
+                    var temp_desc = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."]
+                    var temp_url = ["/stores", "/dine"]
+                    _.forEach(temp_image_url, function (value, key) {
+                        var temp = {};
+                        temp.image_url = temp_image_url[key];
+                        temp.name = temp_name[key];
+                        temp.description = temp_desc[key];
+                        temp.url = temp_url[key];
+                        banners.push(temp);
                     });
+                    console.log(banners)
+                    
                     banners = _.orderBy(banners, function(o) { return o.position });
                     return banners
                 },
