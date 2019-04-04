@@ -55,12 +55,12 @@
                     var _this = this;
                     this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + this.id + ".json" }).then(function (response) {
                         _this.currentPage = response.data;
-                        _this.$breadcrumbs[0].meta.breadcrumb = _this.currentPage.title
-                        _this.dataLoaded = true;
                         console.log(_this.currentPage)
                         if (_this.currentPage.title = "Thank You") {
                             _this.currentPage.title = "Newsletter"
                         }
+                        _this.$breadcrumbs[0].meta.breadcrumb = _this.currentPage.title
+                        _this.dataLoaded = true;
                     }, function (error) {
                         console.error( "Could not retrieve data from server. Please check internet connection and try again.");
                         _this.$router.replace({ name: '404' });
