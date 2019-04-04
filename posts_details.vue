@@ -111,6 +111,7 @@
                         }
                     }
                 }
+                console.log(currentPromo)
             },
             computed: {
                 ...Vuex.mapGetters([
