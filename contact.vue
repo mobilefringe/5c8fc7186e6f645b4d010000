@@ -103,6 +103,7 @@
                     dataLoaded: false,
                     pageBanner: null,
                     main: null,
+                    description: null,
                     contactInfo: null,
                     form_data: {},
                     loginPending: null,
@@ -128,8 +129,8 @@
                         this.main = response[0].data
                         if(response[0].data && response[0].data.subpages){
                            this.contactInfo = response[0].data.subpages[0];
-                        }
-                        console.log(this.main)
+                        };
+                        this.description = response[0].data.subpages[0];
                     }
                     this.dataLoaded = true;
                 });
