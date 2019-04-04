@@ -57,11 +57,11 @@
                         _this.currentPage = response.data;
                         _this.$breadcrumbs[0].meta.breadcrumb = _this.currentPage.title
                         _this.dataLoaded = true;
+                        console.log(_this.currentPage)
                     }, function (error) {
                         console.error( "Could not retrieve data from server. Please check internet connection and try again.");
                         _this.$router.replace({ name: '404' });
                     });
-                    console.log(this.currentPage)
                 }
             }
         });
