@@ -276,20 +276,20 @@ define([], function () {
                 }
             ]
         },
-        {
-            path: '/thank_you',
-            component: view('default'),
-            meta: {
-                breadcrumb: 'Thank You'
-            },
-            children: [
-                {   
-                    path: '',
-                    component: view('thank_you'),
-                    name: 'Thank You'
-                }
-            ]
-        },
+        // {
+        //     path: '/thank_you',
+        //     component: view('default'),
+        //     meta: {
+        //         breadcrumb: 'Thank You'
+        //     },
+        //     children: [
+        //         {   
+        //             path: '',
+        //             component: view('thank_you'),
+        //             name: 'Thank You'
+        //         }
+        //     ]
+        // },
         {
             path: '*',
             redirect: '/'
