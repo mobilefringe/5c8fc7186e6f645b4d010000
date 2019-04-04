@@ -130,11 +130,11 @@
                         if(response[0].data && response[0].data.subpages){
                            this.contactInfo = response[0].data.subpages[0];
                         };
-                        this.description = response[0].data
-                        if(response[0].data && response[0].data.subpages){
-                           this.description = response[0].data.subpages[1];
-                        };
                     }
+                    this.description = response[0].data
+                    if(response[0].data && response[0].data.subpages){
+                       this.description = response[0].data.subpages[1];
+                    };
                     this.dataLoaded = true;
                 });
             },
