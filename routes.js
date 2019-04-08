@@ -113,52 +113,52 @@ define([], function () {
                 }
             ]
         },
-        // {
-        //     path: '/events',
-        //     component: view('default'),
-        //     meta: {
-        //         breadcrumb: 'Events',
-        //     },
-        //     children: [
-        //         {
-        //             path: '',
-        //             component: view('events'),
-        //             name: 'events'
-        //         },
-        //         {
-        //             path: ':id',
-        //             component: view('event_details'),
-        //             meta: {
-        //                 breadcrumb: 'Event Details',
-        //             },
-        //             name: 'eventDetails',
-        //             props: true
-        //         }
-        //     ]
-        // },
-        // {
-        //     path: '/promotions',
-        //     component: view('default'),
-        //     meta: {
-        //         breadcrumb: 'Sales & Promotions',
-        //     },
-        //     children: [
-        //         {
-        //             path: '',
-        //             component: view('promotions'),
-        //             name: 'promotions'
-        //         },
-        //         {
-        //             path: ':id',
-        //             component: view('promotion_details'),
-        //             meta: {
-        //                 breadcrumb: 'Promotion Details',
-        //             },
-        //             name: 'promotionDetails',
-        //             props: true
-        //         }
-        //     ]
-        // },
+        {
+            path: '/events',
+            component: view('default'),
+            meta: {
+                breadcrumb: 'Events',
+            },
+            children: [
+                {
+                    path: '',
+                    component: view('events'),
+                    name: 'events'
+                },
+                {
+                    path: ':id',
+                    component: view('event_details'),
+                    meta: {
+                        breadcrumb: 'Event Details',
+                    },
+                    name: 'eventDetails',
+                    props: true
+                }
+            ]
+        },
+        {
+            path: '/promotions',
+            component: view('default'),
+            meta: {
+                breadcrumb: 'Sales & Promotions',
+            },
+            children: [
+                // {
+                //     path: '',
+                //     component: view('promotions'),
+                //     name: 'promotions'
+                // },
+                {
+                    path: ':id',
+                    component: view('promotion_details'),
+                    meta: {
+                        breadcrumb: 'Promotion Details',
+                    },
+                    name: 'promotionDetails',
+                    props: true
+                }
+            ]
+        },
         {
             path: '/events-and-promotions',
             component: view('default'),
