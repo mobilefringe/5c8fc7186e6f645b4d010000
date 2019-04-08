@@ -185,18 +185,6 @@
                 ]),
                 homeBanners() {
                     var banners = [];
-                    var temp_image_url = ["//codecloud.cdn.speedyrails.net/sites/5c8fc7186e6f645b4d010000/image/jpeg/1554401780323/ahf_home_1925x470.jpg" ]
-                    var temp_name = ["Lorem Ipsum"]
-                    var temp_desc = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."]
-                    var temp_url = ["/stores", "/dine"]
-                    _.forEach(temp_image_url, function (value, key) {
-                        var temp = {};
-                        temp.image_url = temp_image_url[key];
-                        temp.name = temp_name[key];
-                        temp.description = temp_desc[key];
-                        temp.url = temp_url[key];
-                        banners.push(temp);
-                    });
                     _.forEach(this.$store.state.banners, function (value, key) {
                         var today = new Date();
                         var start = new Date (value.start_date);
@@ -214,6 +202,18 @@
                                 value.heading = value.cms_fields.subheader;
                             }
                         }
+                        var temp_image_url = ["//codecloud.cdn.speedyrails.net/sites/5c8fc7186e6f645b4d010000/image/jpeg/1554401780323/ahf_home_1925x470.jpg" ]
+                    var temp_name = ["Lorem Ipsum"]
+                    var temp_desc = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."]
+                    var temp_url = ["/stores", "/dine"]
+                    _.forEach(temp_image_url, function (value, key) {
+                        var temp = {};
+                        temp.image_url = temp_image_url[key];
+                        temp.name = temp_name[key];
+                        temp.description = temp_desc[key];
+                        temp.url = temp_url[key];
+                        banners.push(temp);
+                    });
                     });
                     
                     banners = _.orderBy(banners, function(o) { return o.position });
