@@ -21,15 +21,6 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <a v-if="leasingBooklet" :href="leasingBooklet" target="_blank">
-        		                <div class="animated_btn leasing_btn">
-        		                    Leasing Booklet
-        		                </div>    
-        		            </a>    
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
                             <div class="leasing_contact" v-if="leasingInfo" v-html="leasingInfo.body"></div>
                         </div>
                     </div>
@@ -66,11 +57,6 @@
                         this.pageBanner = {
                             "image_url": "//codecloud.cdn.speedyrails.net/sites/5c8fc7186e6f645b4d010000/image/png/1553541537390/anaheim_hills_banner.png"
                         }
-                    }
-                    
-                    var temp_repo1 = this.findRepoByName('Leasing Booklet');
-                    if(temp_repo1) {
-                        this.leasingBooklet = temp_repo1.images[0].image_url;
                     }
 
                     var temp_repo2 = this.findRepoByName('Leasing Images');
