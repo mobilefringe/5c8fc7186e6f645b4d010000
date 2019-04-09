@@ -120,11 +120,11 @@ define([], function () {
                 breadcrumb: 'Events',
             },
             children: [
-                // {
-                //     path: '',
-                //     component: view('events'),
-                //     name: 'events'
-                // },
+                {
+                    path: '',
+                    component: view('events'),
+                    name: 'events'
+                },
                 {
                     path: ':id',
                     component: view('event_details'),
