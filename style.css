@@ -1488,11 +1488,10 @@ width: 215px;
     .fa-search {
         position: absolute;
         top: 8px;
-        right: 1px;
-        font-size: 0.875rem;
+        right: 10px;
+        // font-size: 0.875rem;
         line-height: normal;
         color: #555;
-        width: 10%;
     }
     .options-list {
         top: 42px;
