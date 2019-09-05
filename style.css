@@ -1796,7 +1796,6 @@ width: 215px;
     margin-bottom: 20px;
     padding: 0;
     list-style-type: none;
-    font-size: 1.083rem;
     line-height: normal;
     li {
         margin-bottom: 20px;
@@ -1814,7 +1813,7 @@ width: 215px;
         float: right;
     }
     .hours_vary {
-        font-size: 0.916rem;
+        font-size: 0.875rem;
         color: #000;
     }
 }
@@ -1969,9 +1968,9 @@ width: 215px;
     }
     #mobile_nav {
         width: 100vw;
-        height: calc(100vh - 135px);
+        height: calc(100vh - 102px);
         position: absolute;
-        top: 29px;
+        top: 0;
         left: 0;
         right: 0;
         overflow-y: scroll;
@@ -1980,9 +1979,25 @@ width: 215px;
             margin: 20px 0 0 0;
             padding: 0;
         }
+        .mobile_social_icon_container {
+            margin: 50px auto 0 auto;
+            max-width: 300px;
+            text-align: center;
+            .social_title {
+                color: #FFF;
+                text-transform: uppercase;
+            }
+            .social_icon {
+                padding: 0 5px;
+                .fab {
+                    font-size: 2.5rem;
+                    color: #FFF;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
     }
     #mobile_nav ul .menu_item {
-        // padding: 12px 0;
         display: block;
         font-size: 1.25rem;
         text-align: center;
