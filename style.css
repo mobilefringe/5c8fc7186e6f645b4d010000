@@ -338,8 +338,6 @@ input[type="search"] {
                     color: #fff;
                 }
             	&:hover, &:active, &:focus, &:visited {
-            	   // background: $primary;
-            	    color: #fff;
             	    background: rgb(245,138,40);
             	}
             }
