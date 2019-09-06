@@ -307,7 +307,7 @@ input[type="search"] {
     	position: relative;
         .menu_item {
             margin: 0;
-        	padding: 6px 60px 24px 0;
+        	padding: 6px 60px 20px 0;
             display: inline-block;
         	position: relative;
         	font-size: 0.875rem;
@@ -366,9 +366,6 @@ input[type="search"] {
         span {
             font-family: 'Roboto Condensed', sans-serif;
             color: $secondary;
-        }
-        #newsletter_margin {
-            margin: 30px 0;
         }
         #userName, #emailAddress {
             margin-left: 10px;
