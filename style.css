@@ -466,7 +466,7 @@ strong {
         p {
             margin: 0;
         }
-        a {
+        a:hover {
             color: #bace86;
         }
     }
