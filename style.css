@@ -345,6 +345,9 @@ strong {
             	}
             	&:hover, &:active, &:focus, &:visited {
             	    background: rgb(245,138,40);
+            	    p {
+            	        color: #fff;
+            	    }
             	}
             }
         }
