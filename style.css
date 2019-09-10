@@ -72,7 +72,7 @@ a {
     color: inherit;
     transition: color 0.3s ease;
     &:hover {
-        color: $primary;
+        // color: $primary;
         text-decoration: none;
     }
     &:focus {
@@ -476,7 +476,6 @@ strong {
 .message_content {
     h1 {
         margin-bottom: 44px;
-        // color: $primary;
         text-transform: uppercase;
     }
     p {
