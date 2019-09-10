@@ -466,6 +466,9 @@ strong {
         p {
             margin: 0;
         }
+        a {
+            color: #bace86;
+        }
     }
 }
 
