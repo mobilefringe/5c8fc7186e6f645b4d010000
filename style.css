@@ -73,7 +73,7 @@ a {
     transition: color 0.3s ease;
     &:hover {
         text-decoration: none;
-        color: $primary;
+        color: #4e5f21;
     }
     &:focus {
         text-decoration: none;
