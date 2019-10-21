@@ -209,8 +209,18 @@
                 },
                 dropDownCats() {
                     var vm = this;
-                    var cats = _.filter(this.processedCategories, function(o) { return _.toNumber(o.id) !== vm.dineFilter && o.store_ids != null});
-                    cats = _.map(cats, 'name');
+                    var store_cats = _.filter(this.processedStores, function(o) { return !_.includes(o.categories, vm.dineFilter) });
+                    var cats = [];
+                    _.forEach(store_cats, function(value, key) {
+                        _.forEach(value.categories, function(category, key) {
+                            var current_category = vm.findCategoryById(category)
+                            if(!_.includes(cats, current_category.name)) {
+                                
+                                cats.push(current_category.name)
+                            }
+                        });
+                    });
+                    cats = cats.sort();
                     cats.unshift('All');
                     return cats;
                 },
