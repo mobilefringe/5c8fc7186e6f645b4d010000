@@ -1722,23 +1722,23 @@ input[type=search] {
     }
 }
 .no_logo_container {
-  position: relative;
-  width: 100%;
-  .no_logo_text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    color: $primary;
-    text-transform: uppercase;
-    font-weight: 600;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    line-height: normal;
-    letter-spacing: 0.6px;
-  }
+    position: relative;
+    width: 100%;
+    .no_logo_text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        color: #000;
+        text-transform: uppercase;
+        font-weight: 600;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        line-height: normal;
+        letter-spacing: 0.6px;
+    }
 }
 
 .listView {
