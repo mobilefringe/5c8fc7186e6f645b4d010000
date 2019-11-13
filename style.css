@@ -1532,6 +1532,9 @@ input[type=search] {
     float: right;
     background: #ebebeb;
     .v-select {
+        .spinner {
+            font-size: 1 rem;
+        }
         .dropdown-toggle {
             border: none; 
             .form-control {
