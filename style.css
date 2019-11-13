@@ -1533,7 +1533,7 @@ input[type=search] {
     background: #ebebeb;
     .v-select {
         .spinner {
-            font-size: 1 rem;
+            font-size: 1rem;
         }
         .dropdown-toggle {
             border: none; 
