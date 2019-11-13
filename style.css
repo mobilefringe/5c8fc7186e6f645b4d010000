@@ -1726,6 +1726,7 @@ input[type=search] {
     position: relative;
     width: 100%;
     .no_logo_text {
+        width: 80%;
         position: absolute;
         top: 50%;
         left: 50%;
