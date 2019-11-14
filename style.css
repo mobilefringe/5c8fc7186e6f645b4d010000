@@ -1838,8 +1838,8 @@ input[type=search] {
         text-transform: uppercase;
     }
     .today {
-        font-weight: 500;
-        color: #627a43;
+        font-weight: 700;
+        // color: #627a43;
     }
     .hours_list_day {
 
