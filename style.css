@@ -1383,6 +1383,7 @@ input[type=search] {
     font-weight: 500;
     font-size: 1.166rem;
     line-height: normal;
+    letter-spacing: 0;
     color: $secondary;
 }
 .store_list_container {
