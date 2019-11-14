@@ -26,7 +26,7 @@
                             </div>
                             <div class="col-md-4">
                                 <a :href="currentEvent.image_url" :data-lightbox="currentEvent.name">
-                                    <img v-lazy="currentEvent.image_url" :alt="'Promotion: ' + currentEvent.name" class="margin_20 img_max"/>    
+                                    <img v-lazy="currentEvent.image_url" :alt="'Event: ' + currentEvent.name" class="margin_20 img_max"/>    
                                 </a>
                             </div>
                         </div>
