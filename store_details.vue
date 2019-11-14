@@ -78,28 +78,7 @@
                                     <div class="col-md-6" v-if="storePromotions" v-for="item in storePromotions">
                                         <div class="feature_item_container">
                                 	        <router-link class="tile" :to="{ name: 'promoDetails', params: { id: item.slug }}">
-                                    			<img :src="item.image_url" :alt="item.name">
-                                				<div class="details">
-                        					    	<span class="title">
-                        					            <h3>{{ item.name }}</h3>
-                    					            </span>
-                            					    <span class="info">
-                        					            <p><span v-if="isMultiDay(item)">{{ item.start_date | moment("MMMM D", timezone)}} - {{ item.end_date | moment("MMMM D", timezone)}}</span><span v-else>{{ item.start_date | moment("MMMM D", timezone)}}</span></p>
-                        					            <p>View Promotion Details <i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
-                    					            </span>
-                                				</div>
-                                    		</router-link>
-                                	    </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div v-if="currentStore.coupons">
-                                <h3 class="store_details_title">Current Coupons</h3> 
-                                <div class="row margin_40">
-                                    <div class="col-md-6" v-if="storeCoupons" v-for="item in storeCoupons">
-                                        <div class="feature_item_container">
-                                	        <router-link class="tile" :to="{ name: 'couponDetails', params: { id: item.slug }}">
-                                    			<img :src="item.image_url" :alt="item.name">
+                                    			<img :src="item.image_url" :alt="'Promotion: ' + item.name">
                                 				<div class="details">
                         					    	<span class="title">
                         					            <h3>{{ item.name }}</h3>
@@ -148,19 +127,17 @@
                     storeHours: null,
                     map: null,
                     storeEvents: null,
-                    storePromotions: null,
-                    storeCoupons: null
+                    storePromotions: null
                 }
             },
             props:['id'],
             created (){
                 this.loadData().then(response => {
                     var temp_repo = this.findRepoByName('Directory Banner');
-                    if(temp_repo !== null && temp_repo !== undefined) {
+                    if (temp_repo !== null && temp_repo !== undefined) {
                        temp_repo = temp_repo.images;
                        this.pageBanner = temp_repo[0];
-                    }
-                    else {
+                    } else {
                         this.pageBanner = {
                             "image_url": "//codecloud.cdn.speedyrails.net/sites/5dcc6c196e6f640d63050000/image/png/1553541537390/anaheim_hills_banner.png"
                         }
@@ -184,7 +161,6 @@
                     'findHourById',
                     'findPromoById',
                     'findEventById',
-                    'findCouponById',
                     'findRepoByName'
                 ]),
                 getPNGurl () {
@@ -214,7 +190,12 @@
             methods: {
                 loadData: async function () {
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "stores"), this.$store.dispatch("getData","events"), this.$store.dispatch("getData","promotions"), this.$store.dispatch("getData","coupons"), this.$store.dispatch("getData", "repos")]);
+                        let results = await Promise.all([
+                            this.$store.dispatch("getData", "stores"), 
+                            this.$store.dispatch("getData","events"), 
+                            this.$store.dispatch("getData","promotions"), 
+                            this.$store.dispatch("getData", "repos")
+                        ]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
@@ -223,17 +204,13 @@
                     this.currentStore = this.findStoreBySlug(id);
                     if (this.currentStore === null || this.currentStore === undefined) {
                         this.$router.replace({ name: 'stores' });
-                    }
-                    else {
+                    } else {
                         if (_.includes(this.currentStore.store_front_url_abs, 'missing')) {
                             this.currentStore.no_logo = true
                         } else {
                             this.currentStore.no_logo = false
                         }
-                        // if (_.includes(this.currentStore.store_front_url_abs, 'missing')) {
-                        //     this.currentStore.store_front_url_abs = this.property.default_logo;
-                        // }
-                        
+
                         var vm = this;
                         var storeHours = [];
                         _.forEach(this.currentStore.store_hours, function (value, key) {
@@ -273,18 +250,6 @@
                             temp_event.push(current_event);
                         }); 
                         this.storeEvents = temp_event;
-                        
-                        var vm = this;
-                        var temp_coupon = [];
-                        _.forEach(this.currentStore.coupons, function(value, key) {
-                            var current_coupon = vm.findCouponById(value);
-                            // if (_.includes(current_coupon.image_url, 'missing')) {
-                            //     current_coupon.image_url = "http://placehold.it/1560x800/757575";
-                            // }
-    
-                            temp_coupon.push(current_coupon);
-                        }); 
-                        // this.storeCoupons = temp_coupon;
                     }
                     this.$breadcrumbs[1].meta.breadcrumb = this.currentStore.name
                 },
