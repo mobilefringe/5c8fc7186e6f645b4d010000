@@ -1683,7 +1683,7 @@ input[type=search] {
     }
 }
 .store_logo_container:hover {
-    background: red;
+    background: $primary;
     .store_img {
         display: block;
         -webkit-filter: blur(2px);
