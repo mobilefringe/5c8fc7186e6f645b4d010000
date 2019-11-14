@@ -16,7 +16,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <!--<img v-if="currentContest.image_url" class="img_max" :src="currentContest.image_url" :alt="currentContest.name">-->
+                            <img v-if="currentContest.image_url" class="img_max" :src="currentContest.image_url" :alt="currentContest.name">
                         </div>
                     </div> 
                     <div class="row"> 
@@ -107,7 +107,7 @@
             },
             created() {
                 this.$store.dispatch("getData", "contests").then(response => {
-                    this.currentContest = this.findContestByShowOnSlug('anaheim-contest');
+                    this.currentContest = this.findContestByShowOnSlug('cerritos-contest');
                     this.dataLoaded = true;
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
