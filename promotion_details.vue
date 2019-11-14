@@ -5,7 +5,7 @@
             <div v-if="dataLoaded" v-cloak>
                 <div class="inside_page_header" v-if="pageBanner" v-bind:style="{ background: 'linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), #000 url(' + pageBanner.image_url + ') center center' }">
                     <div class="main_container position_relative">
-                        <h1>Sales & Promotions</h1>
+                        <h1>Events & Promotions</h1>
                     </div>
                 </div>
                 <div class="main_container">
@@ -19,7 +19,7 @@
                             <div class="col-md-8">
                                 <p v-if="currentPromo.promotionable_type == 'Property'" class="event_store_name">{{ property.name }}</p>
                                 <p v-else class="event_store_name">{{ currentPromo.store.name }}</p>
-                                <h4 class="event_name">{{ currentPromo.name }}</h4>
+                                <h2 class="event_name">{{ currentPromo.name }}</h2>
                                 <p class="event_dates">
                                     <span v-if="isMultiDay(currentPromo)">{{ currentPromo.start_date | moment("MMMM D", timezone)}} - {{ currentPromo.end_date | moment("MMMM D", timezone)}}</span>
                                     <span v-else>{{ currentPromo.start_date | moment("MMMM D", timezone)}}</span>
@@ -37,7 +37,7 @@
                                 <div class="row margin_30">
                                     <div class="col-md-12">
                                         <router-link to="/events-and-promotions">
-                    		                <div class="animated_btn pull-left">Back to Sales & Promotions</div>    
+                    		                <div class="animated_btn pull-left">Back to Events & Promotions</div>    
                     		            </router-link>    
                                     </div>
                                 </div>
