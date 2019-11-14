@@ -1861,7 +1861,6 @@ input[type=search] {
 }
 .store_details_title {
     margin-bottom: 20px;
-    color: $primary;
     text-transform: uppercase;
 }
 
