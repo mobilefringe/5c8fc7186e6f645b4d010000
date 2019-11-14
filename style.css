@@ -727,7 +727,7 @@ strong {
 .inside_page_header {
     margin-bottom: 24px;
     height: 282px;
-    background: url('//codecloud.cdn.speedyrails.net/sites/5dcc6c196e6f640d63050000/image/png/1553541537390/anaheim_hills_banner.png');
+    background-image: url('//codecloud.cdn.speedyrails.net/sites/5dcc6c196e6f640d63050000/image/png/1553541537390/anaheim_hills_banner.png');
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
