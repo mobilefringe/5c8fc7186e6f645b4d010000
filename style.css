@@ -1757,7 +1757,7 @@ input[type=search] {
         -moz-osx-font-smoothing: grayscale;
         line-height: normal;
         letter-spacing: 0.6px;
-        h4 {
+        h2 {
             color: inherit;
         }
     }
