@@ -295,7 +295,7 @@
                             this.$store.dispatch("getData", "banners"), 
                             this.$store.dispatch("getData","promotions"), 
                             this.$store.dispatch("getData", "events"), 
-                            this.$store.dispatch('LOAD_PAGE_DATA', {url: "https://anaheim.mallmaverick.com/api/v4/anaheim/social.json"})
+                            this.$store.dispatch('LOAD_PAGE_DATA', {url: "https://anaheim.mallmaverickstaging.com/api/v4/anaheim/social.json"})
                         ]);
                         return results;
                     } catch(e) {
