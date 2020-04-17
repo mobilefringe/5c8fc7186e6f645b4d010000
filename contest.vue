@@ -106,6 +106,21 @@
                 }
             },
             created() {
+                this.$store.dispatch("getData", "repos").then(response => {
+                    var temp_repo = this.findRepoByName('Events Banner');
+                    if(temp_repo !== null && temp_repo !== undefined) {
+                       temp_repo = temp_repo.images;
+                       this.pageBanner = temp_repo[0];
+                    }
+                    else {
+                        this.pageBanner = {
+                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5dcc6c196e6f640d63050000/image/png/1553541537390/anaheim_hills_banner.png"
+                        }
+                    }
+                }, error => {
+                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
+                }); 
+                
                 this.$store.dispatch("getData", "contests").then(response => {
                     this.currentContest = this.findContestByShowOnSlug('anaheim-anaheim-hills-contest');
                     if (this.currentContest) {
