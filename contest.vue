@@ -70,6 +70,13 @@
                                             I agree to receive newsletters from {{ property.name }}. (You can unsubscribe at anytime)
                                         </label>
         						    </div>
+        						      <div class="col-xs-12" :class="{'has-error': errors.has('agree_terms')}">
+        						        <label class="checkbox">
+                                            <input name="agree_terms" type="checkbox" v-model="form_data.terms" required>
+                                                I have read and agree to the <a class="primary" href="/pages/longbeach-rules-and-regulations" target="_blank">Contest Rules & Regulations</a>.
+                                        </label>
+        						    </div>
+        					    </div>
         						    <div class="col-xs-12">
         						        <p>For more details about personal privacy, please read our <a href="/pages/anaheim-privacy-policy" target="_blank">Privacy Policy</a>.</p>
                                     </div>
