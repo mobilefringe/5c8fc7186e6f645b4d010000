@@ -134,7 +134,7 @@
                 }); 
                 
                 this.$store.dispatch("getData", "contests").then(response => {
-                    this.currentContest = this.findContestByShowOnSlug('anaheim-contest');
+                    this.currentContest = this.findContestByShowOnSlug('anaheim-anaheim-hills-contest');
                     if (this.currentContest) {
                         this.dataLoaded = true;
                     } else {
