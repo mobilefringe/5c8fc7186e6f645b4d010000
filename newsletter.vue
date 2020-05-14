@@ -13,7 +13,8 @@
                         <div class="col-md-12">
                             <breadcrumb></breadcrumb>
                             <div v-if="pageContent" v-html="pageContent.body"></div>
-                            <form class="newsletter_form form-horizontal" action="//mobilefringe.createsend.com/t/d/s/autdht/" method="post">
+                            <!--<form class="newsletter_form form-horizontal" action="//mobilefringe.createsend.com/t/d/s/autdht/" method="post">-->
+                            <form class="js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1AEFBCE09F4F7F6501D18E9F0094437896DAEECFD58C11775EDD4F4CAE4BBAF280EDF78C7B968F540B666BC35497A8B280">
                                 <div class="row">
                                     <div class="col-sm-6" >
                                         <label for="fieldgqdtr" class="visuallyhidden">First Name</label>
@@ -26,8 +27,8 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12">
-                                        <label for="newsletter_email" class="visuallyhidden">Email</label>
-                                        <input v-model="form_data.email" required class="margin_20 form-control" name="cm-autdht-autdht" type="email" placeholder="Email" id="newsletter_email">
+                                        <label for="fieldEmail" class="visuallyhidden">Email</label>
+                                        <input v-model="form_data.email" required class="margin_20 form-control" name="cm-autdht-autdht" type="email" placeholder="Email" id="fieldEmail"><!--newsletter_email-->
                                     </div>
                                 </div>
                                 <div class="row">
@@ -65,7 +66,7 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "jquery", "vee-validate", "json!site.json"], function(Vue, Vuex, $, VeeValidate, site) {
+    define(["Vue", "vuex", "jquery", "vee-validate", "json!site.json", "campaignMonitor"], function(Vue, Vuex, $, VeeValidate, site, campaignMonitor) {
         Vue.use(VeeValidate);
         return Vue.component("newsletter-component", {
             template: template, // the variable template will be injected
