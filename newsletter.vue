@@ -34,7 +34,7 @@
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div style="margin-left: 20px">
-                                            <label class="checkbox">
+                                            <label for="cm-privacy-consent" class="checkbox">
                                                 <input name="cm-privacy-consent" id="cm-privacy-consent" required  type="checkbox">
                                                     I agree to receive communications from {{ property.name }}.
                                             </label>
